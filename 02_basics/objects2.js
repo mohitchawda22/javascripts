@@ -43,4 +43,25 @@ console.log(Object.keys(tinderuser));
 console.log(Object.values(tinderuser));
 console.log(Object.entries(tinderuser));
 
-console.log(tinderuser.hasOwnProperty());
+console.log(tinderuser.hasOwnProperty("isLoggedIn"));
+
+const course={
+    cousrename:"js",
+    price:1999,
+    courseIns:"mohit"
+}
+
+const{courseIns:ins}= course
+console.log(ins);
+
+const navbar=({company})=>{
+
+}
+
+navbar(company="hitesh")
+///types of json
+//{
+ //   "name":"mohit",
+ //   "coursename":"js",
+  //  "price":"free"
+//}
