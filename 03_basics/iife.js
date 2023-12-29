@@ -1,6 +1,6 @@
 // function hello(){
 //     console.log("hello");
-// }()      =>this will give error:
+// }()     // =>this will give error:
 
 
 (function hello(){
