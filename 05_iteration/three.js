@@ -35,6 +35,27 @@ for (const key in MyOBject) {
 
 const array=["py","saf","faaf","qw","sda"]
 
-array.forEach(element => {    ////=> this function is called calledback function
-    console.log(element);
+array.forEach((element,index,array) => {    ////=> this function is called calledback function
+    console.log(element,index,array);
 });
+
+const coding=[
+    {
+        language:"javascript",
+        languageFileName:"js"
+},
+    {
+        language:"python",
+        languageFileName:"py"
+},
+    {
+        language:"reactjs",
+        languageFileName:"rjs"
+}
+]
+
+coding.forEach((value) => {
+    console.log(value.language);
+    console.log(value.languageFileName);
+});
+
