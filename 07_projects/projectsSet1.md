@@ -179,3 +179,73 @@ function endGame() {
 }
 
 ```
+
+## project 5 solution
+
+```JavaScript
+
+
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'
+  <table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  `;
+});
+
+```
+
+
+## project 6 solution
+
+```JavaScript
+
+
+//generate a random color
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+
+const StartChangeColor = function () {
+  if(!intervalId){
+    intervalId = setInterval(changebg, 1000);
+  }
+
+  function changebg() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const StopChangeColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', StartChangeColor);
+
+document.querySelector('#stop').addEventListener('click', StopChangeColor);
+
+console.log(randomColor());
+
+
+```
